@@ -23,11 +23,12 @@ export const registerControllers = async (req, res, next) => {
             });
         }
 
-        //preparing encrypted for storing db
         const salt = await bcrypt.genSalt(10);
+
         const hashedPassword = await bcrypt.hash(password, salt);
 
         // console.log(hashedPassword);
+
         let newUser = await User.create({
             name, 
             email, 

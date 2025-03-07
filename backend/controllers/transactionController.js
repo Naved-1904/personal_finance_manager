@@ -104,7 +104,7 @@ export const getAllTransactionController = async (req, res) => {
     // console.log(query);
 
     const transactions = await Transaction.find(query);
-    //select * from transaction where date>18/02/2025
+
     // console.log(transactions);
 
     return res.status(200).json({

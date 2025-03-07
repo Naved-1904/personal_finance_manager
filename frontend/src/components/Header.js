@@ -65,7 +65,7 @@ const navigate = useNavigate();
               },
             },
             color: {
-              value: '#fff',
+              value: '#ffcc00',
             },
             shape: {
               type: 'circle',
@@ -113,7 +113,7 @@ const navigate = useNavigate();
       />
     <Navbar className="navbarCSS" collapseOnSelect expand="lg" style={{position: 'relative', zIndex: "2 !important"}}>
       {/* <Navbar className="navbarCSS" collapseOnSelect expand="lg" bg="dark" variant="dark"> */}
-        <Navbar.Brand href="/" className="text-white navTitle">Personal Finance Manager</Navbar.Brand>
+        <Navbar.Brand href="/" className="text-white navTitle">Expense Management System</Navbar.Brand>
         <Navbar.Toggle
             aria-controls="basic-navbar-nav"
             style={{

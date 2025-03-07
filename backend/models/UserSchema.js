@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 import validator from "validator";
+import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
 
 // User Schema Model - (Name, email, password, creation Date) with validation rules
-//new mongoose.Schema({feild1:{type:dtype,contraint:value},feild2:{type:dtype,contraint:value}})
-//CREATE TABLE USER(name varchar(25) notnull)
 const userSchema = new mongoose.Schema({
     name: {
         type: String,
@@ -24,6 +24,7 @@ const userSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
+
     avatarImage: {
         type: String,
         default: ""
@@ -31,12 +32,16 @@ const userSchema = new mongoose.Schema({
     transactions: {
         type: [],
     },
+
     createdAt: {
         type:Date,
         default: Date.now,
     },
+
+    
+
 });
 
 const User = mongoose.model("User", userSchema);
 
-export default User;
+export default  User;
